@@ -1,3 +1,5 @@
-<p>
-  student works!
-</p>
+<button (click)="testAjax()">TestAjax</button>
+
+<div *ngFor="let image of images">
+	<img [src]="image.thumbnailUrl" [alt]="image.alt">
+</div>

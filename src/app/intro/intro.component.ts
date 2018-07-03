@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {Student} from "../model/student";
+import {Student} from '../../model/student';
 // importation nom de classe + from + chemin_nom_fichier_contenant_definition_classe
-import {Player} from "../model/player";
+import {Player} from '../../model/player';
 
 
 
