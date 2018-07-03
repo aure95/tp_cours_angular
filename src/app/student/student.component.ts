@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http'
 
 @Component({
   selector: 'app-student',
@@ -7,7 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentComponent implements OnInit {
 
-  constructor() { }
+//injection de dépendance un objet de type hhtpClient est  crée dès l'instancitaion de la classe StudentComponent 
+// StudentComponent dispose d'une propriété http lui permettant de faire des requetes ajax
+
+//	private http: HttpClient;
+
+
+//injection de dépendance raccourci typescript 
+  constructor(private httClient) {
+  	//this.http=new HttpClient;
+
+   }
 
   ngOnInit() {
   }
