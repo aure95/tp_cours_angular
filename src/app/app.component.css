@@ -1,0 +1,26 @@
+span.injured
+{
+	color:red;
+	font-weight: bold
+}
+
+#photo
+{
+	width: 50px;
+}
+
+.visible
+{
+	display:inline;
+}
+
+.not-visible
+{
+	display:none;
+}
+
+.note-sup-15
+{
+	font-size: 15pt;
+	color:green;
+}
