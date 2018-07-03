@@ -1,7 +1,14 @@
-import {Component} from "@angular/core";
+import {Component} from '@angular/core';
+import {Student} from "../model/student";
+// importation nom de classe + from + chemin_nom_fichier_contenant_definition_classe
+import {Player} from "../model/player";
+
+
+
+
+
 
 @Component({
-
 	selector:'app-intro',
 	templateUrl:'./intro.component.html',
 	styleUrls:["./intro.component.css"]
@@ -10,8 +17,11 @@ import {Component} from "@angular/core";
 })
 
 
+
 export class IntroComponent
 {
+
+
 	 public groups: string[] =["ESD","POEI Java","POEC Symfony"]
   style1 :any={
   	'color':"green",

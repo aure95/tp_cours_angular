@@ -54,7 +54,7 @@
      <th>Moyenne</th> 
   </tr>
   <tr *ngFor="let s of stud"
-      [ngStyle]="{'display':s.group == selectedValue || selectedValue=='0'?'table-row': 'none'}">
+     <!-- [ngStyle]="{'display':s.group == selectedValue || selectedValue=='0'?'table-row': 'none'}"-->>
      <td class="photo">
        <img src={{s.photo}}>
      </td>

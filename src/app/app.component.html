@@ -1,74 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<app-intro></app-intro>
+<!--<app-intro></app-intro>-->
+<app-student></app-student>
 
 
-<h1 style="color:orange">Angular:introduction au framework</h1>
-<p>{{message}}</p> <!-- {{}} : property binding (lecture) -->
-<span id="{{id}}" [innerText]="message"></span>
-<img [src]="urlImage" alt=""/> <!-- auttre forme de binding -->
-
-<h2>Student</h2>
-<p>{{student.name}} ({{student.age}} ans)</p>
-
-
- <p *ngFor="let student of students">{{student}}</p><!-- iteration sur element present dans app.components.ts-->
-
- <table class="table">
-  <tr>
-    <th>Nom</th>
-    <th>Equipe</th>
-    <th>Numéro</th>
-    <th>Etat de forme</th>
-  </tr>
-  <tr *ngFor="let player of players">
-
-    <td>{{player.name}}</td>
-    <td>{{player.team}}</td>
-    <td>{{player.num}}</td>
-    <td>
-      <span class="injured" *ngIf="player.injured">Blessé</span>
-      <span *ngIf="!player.injured">Opérationnel</span>
-    </td>
-
-  </tr>
- </table>
-
- <button (click)="test()" class="button">Test</button>
-
- <span>{{compteur}}</span>
- <p *ngIf="compteur>=10">Basta arrete de clicker!</p>
- <p [ngStyle]="style1" [ngClass]="{'visible':compteur>=10,'not-visible':compteur!=10}">Basta2 arrete de clicker!</p>
-
-
- <input type="checkbox" (click)="highlightStudents()">
- <span>
-   Bons étudiants
- </span>
-
- <select (change)="onChange($event)">
-    <option value="0">Sélectionner un groupe</option>
-   <option *ngFor="let group of groups">{{group}}</option>
- </select>
-
- <table class=table>
-  <tr>
-    <th>Photo</th>
-     <th>Prénom</th>
-     <th>Nom</th>
-     <th>Moyenne</th> 
-  </tr>
-  <tr *ngFor="let s of stud"
-      [ngStyle]="{'display':s.group == selectedValue || selectedValue=='0'?'table-row': 'none'}">
-     <td class="photo">
-       <img src={{s.photo}}>
-     </td>
-     <td>{{s.firstname}}</td>
-     <td>{{s.lastname}}</td>
-     <td>{{s.groupe}}</td>
-     <td [ngClass]="{'note-sup-15':calculMoyenne(s.notes)>15 && SHOW_GOOD_STUDENTS}">{{calculMoyenne(s.notes)}}</td> 
-  </tr>
- </table>
 
 
 
