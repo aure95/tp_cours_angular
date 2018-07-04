@@ -1,0 +1,15 @@
+<p>
+  list-student works!
+</p>
+<!--
+<li *ngFor="let student of students">{{student.firstname}}</li>
+-->
+
+<div>
+  <h3>Nom Prénom</h3>
+</div>
+<input type="checkbox" (click)="toto()" />
+<span>checkbox modifier notes<span>
+<div *ngFor="let student of students">
+<app-student [data]="student" [checkbox_value]="checkbox_value"></app-student>
+</div>

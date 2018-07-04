@@ -1,5 +1,27 @@
-<button (click)="testAjax()">TestAjax</button>
+
+
+<!--<button (click)="testAjax()">TestAjax</button>-->
 
 <div *ngFor="let image of images">
-	<img [src]="image.thumbnailUrl" [alt]="image.alt">
+	<img [id]="image.id" [src]="image.url" [alt]="image.alt">
 </div>
+
+<div>
+	<h3>{{student.firstname}}</h3>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<img class="thumb" [src]="student.image" alt="">
+	</div>
+		<h3>{{student.firstname}}{{student.lastname}}</h3>
+	</div>
+
+	<div *ngFor="let note of student.notes">
+		<span>{{note}}</span>
+	</div>
+
+		<td>
+			<button class="btn btn-primary btn -sm" (click)="changeNote()">Modifier</button>
+		</td>
+	<td>
